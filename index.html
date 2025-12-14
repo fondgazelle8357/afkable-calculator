@@ -90,7 +90,7 @@
             }
         }
 
-        /* --- Input Grid (Compact Mode) --- */
+        /* --- Input Grid --- */
         .ore-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -508,7 +508,10 @@
                 }
             });
 
+            // Sort High to Low
             calculatedStackValues.sort((a, b) => b.totalValue - a.totalValue);
+
+            // Render top 5
             renderResults(calculatedStackValues.slice(0, 5));
         }
 
@@ -595,21 +598,22 @@
             checkboxes.forEach(cb => cb.checked = state);
         }
 
-        // --- Visit Counter Logic ---
+        // --- FIXED Visit Counter Logic (Using CounterAPI.dev) ---
         function updateVisitCount() {
             const countEl = document.getElementById('visit-count');
-            // CHANGE THIS to your own unique string (e.g. your github username)
+            
+            // This is the new, working API service
             const namespace = 'forge-ore-calculator-lohsttt'; 
             const key = 'visits';
 
-            fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+            fetch(`https://api.counterapi.dev/v1/${namespace}/${key}/up`)
                 .then(response => response.json())
                 .then(data => {
-                    countEl.innerText = data.value;
+                    countEl.innerText = data.count;
                 })
                 .catch(err => {
                     console.error("Counter Error:", err);
-                    countEl.innerText = "Err";
+                    countEl.innerText = "-"; 
                 });
         }
 
