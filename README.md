@@ -1,4 +1,4 @@
-# Forge Ore Calculator
+# Forge Ore Calculator (completely vibe-coded i take no credit)
 
 A web-based utility tool designed to optimize ore usage in the Forge. This calculator helps players determine the best 5-slot combination of ores to maximize their output multiplier.
 
