@@ -2,8 +2,7 @@
 
 A web-based utility tool designed to optimize ore usage in the Forge. This calculator helps players determine the best 5-slot combination of ores to maximize their output multiplier.
 
-## 🔗 [Click Here to Open the Calculator](lohsttt.github.io/afkable-calculator)
-*(Replace the link above with the one generated in your Settings > Pages tab)*
+## 🔗 [Click Here to Open the Calculator](https://lohsttt.github.io/afkable-calculator/)
 
 ## ✨ Features
 
